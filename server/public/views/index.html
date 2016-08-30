@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Omicron Intro to Mongoose with Books</title>
+    <script src="/vendor/angular.min.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/bookController.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link rel="stylesheet" href="/vendor/normalize.css" />
+    <link rel="stylesheet" href="/vendor/skeleton.css" />
+    <link rel="stylesheet" href="/styles/stylesheet.css" />
+</head>
+
+<body ng-app="bookApp">
+    <main class="container" ng-controller="BookController">
+        <h1>So Books Right</h1>
+        <!-- Submit a book -->
+        <section id="bookSubmission" class="row">
+            <h2>Submit a Book</h2>
+            <form id="bookForm">
+                <div class="row">
+                    <div class="three columns">
+                        <label for="title">Title:</label>
+                        <input ng-model="newBook.title" type="text" id="currentBookTitle" name="title" />
+                    </div>
+
+                    <div class="three columns">
+                        <label for="author">Author:</label>
+                        <input ng-model="newBook.author" type="text" id="currentBookAuthor" name="author" />
+                    </div>
+
+                    <div class="six columns">
+                        <label for="publishDate">Publish Date:</label>
+                        <input ng-model="newBook.publishDate" type="date" id="currentBookPublishDate" name="publishDate" />
+                        <button ng-click="submitNewBook()">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <!-- See submitted books -->
+        <section id="books" class="row">
+            <h2>Book Listing</h2>
+            <div ng-repeat="book in books" id="bookList">
+                <div class="book row">
+                    <div class="three columns">
+                        <label for="title">Title:</label>
+                        <input ng-model="book.title" type="text" id="title" name="title" />
+                    </div>
+
+                    <div class="three columns">
+                        <label for="author">Author:</label>
+                        <input ng-model="book.author" type="text" id="author" name="author" />
+                    </div>
+
+                    <div class="six columns">
+                        <label for="publishDate">Publish Date:</label>
+                        <input ng-model="book.publishDate" type="date" id="publishDate" name="publishDate" />
+                        <button ng-click="updateBook(book)" class="update">Update</button>
+                        <button ng-click="deleteBook(book._id)" class="delete">Delete</button>
+                        <button class="comment" ng-click="displayComments(book._id)">Comments</button>
+                        <div ng-show="displayBookId == book._id">
+                            <div ng-repeat="comment in book.comments">
+                                <p>Comment: {{comment.content}} </p>
+                                <p>Comment By: {{comment.postedBy}}</p>
+                                <p> </p>
+                            </div>
+                            <form id="commentForm">
+                                <label for="comment">Comment</label>
+                                <textarea id="comment" name="comment" ng-model="newComment.content"></textarea>
+
+                                <label for=“postedBy”>Posted By</label>
+                                <!-- want this to have black border box around it -->
+                                <input type="text" id="postedBy" name="postedBy" ng-model="newComment.postedBy" />
+                                <button ng-click="submitComment(book, newComment)">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
