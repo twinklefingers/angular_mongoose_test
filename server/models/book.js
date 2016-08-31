@@ -13,6 +13,7 @@ var bookSchema = new Schema({
     },
     author: String,
     publishDate: Date,
+    publishedBy: String,
     comments: [Comment]
 });
 

@@ -21,14 +21,19 @@
             <h2>Submit a Book</h2>
             <form id="bookForm">
                 <div class="row">
-                    <div class="three columns">
+                    <div class="two columns">
                         <label for="title">Title:</label>
                         <input ng-model="newBook.title" type="text" id="currentBookTitle" name="title" />
                     </div>
 
-                    <div class="three columns">
+                    <div class="two columns">
                         <label for="author">Author:</label>
                         <input ng-model="newBook.author" type="text" id="currentBookAuthor" name="author" />
+                    </div>
+
+                    <div class="two columns">
+                        <label for="publishedBy">Published By:</label>
+                        <input ng-model="newBook.publishedBy" type="text" id="publishedBy" name="publishedBy" />
                     </div>
 
                     <div class="six columns">
@@ -44,14 +49,19 @@
             <h2>Book Listing</h2>
             <div ng-repeat="book in books" id="bookList">
                 <div class="book row">
-                    <div class="three columns">
+                    <div class="two columns">
                         <label for="title">Title:</label>
                         <input ng-model="book.title" type="text" id="title" name="title" />
                     </div>
 
-                    <div class="three columns">
+                    <div class="two columns">
                         <label for="author">Author:</label>
                         <input ng-model="book.author" type="text" id="author" name="author" />
+                    </div>
+
+                    <div class="two columns">
+                        <label for="publishedBy">Published By:</label>
+                        <input ng-model="book.publishedBy" type="text" id="publishedBy" name="publishedBy" />
                     </div>
 
                     <div class="six columns">
@@ -62,9 +72,9 @@
                         <button class="comment" ng-click="displayComments(book._id)">Comments</button>
                         <div ng-show="displayBookId == book._id">
                             <div ng-repeat="comment in book.comments">
-                                <p>Comment: {{comment.content}} </p>
-                                <p>Comment By: {{comment.postedBy}}</p>
-                                <p> </p>
+                                <p class="commentBody">Comment: {{comment.content}} </p>
+                                <p class="commentBy">Comment By: {{comment.postedBy}}</p>
+
                             </div>
                             <form id="commentForm">
                                 <label for="comment">Comment</label>
