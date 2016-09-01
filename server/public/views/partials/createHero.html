@@ -29,6 +29,14 @@
                 <label for="power_name">Power Name:</label>
                 <input ng-model="newHero.power_name" type="text" id="currentHeroPowerName" name="power_name" />
 
+                <select class="drop-down" ng-model="pickHero">
+                  <option class="drop-down" ng-repeat="x in powers" value="{{x.value}}">{{x.type}}</option>
+                </select>
+
+                <!-- <select class="drop-down" ng-model="pickAnimal">
+                  <option class="drop-down" ng-repeat="x in ranAnimals" value="{{x.value}}">{{x.type}}</option>
+                </select> -->
+
                 <button ng-click="submitNewHero()">Submit</button>
             </div>
         </div>

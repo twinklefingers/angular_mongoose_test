@@ -28,4 +28,39 @@ heroApp.controller("heroManagementController", ['$scope', '$http', function($sco
             });
     }
 
+
+    $scope.pickHero = '';
+
+    //create an array with all the animal choices with display and value;
+    $scope.powers = [{
+            type: '(select one)',
+            value: ''
+        }, {
+            type: 'Invisibility',
+            value: 'invisibility'
+        }, {
+            type: 'Flight',
+            value: 'light'
+        }, {
+            type: 'SuperSpeed',
+            value: 'superSpeed'
+        }, {
+            type: 'HeatVision',
+            value: 'heatVision'
+        }, {
+            type: 'SuperStrength',
+            value: 'superStrength'
+        }, {
+            type: 'AcceleratedHealing',
+            value: 'acceleratedHealing'
+        }, {
+            type: 'PowerBlast',
+            value: 'powerBlast'
+        }, {
+            type: 'AnimalAffinity',
+            value: 'animalAffinity'
+        },
+
+    ];
+
 }]);

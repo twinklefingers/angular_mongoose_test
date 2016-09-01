@@ -22,6 +22,7 @@ This section will have a form to fill out and create new heroes. Each hero will
 
 Store these in a Collection called Heroes with Mongo.
 db.createCollection(‘Heroes’);
+// I misspelled heroes the whole way through, spelling it "heros" - whoops
 
 Determining the Super Power
 
