@@ -6,7 +6,9 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 /** ---------- OUR MODULES ---------- **/
-var books = require('./routes/books');
+var createHero = require('./routes/createHero');
+var deleteHero = require('./routes/deleteHero');
+var getHeros = require('./routes/getHeros');
 var index = require('./routes/index');
 
 /** ---------- MIDDLEWARE ---------- **/
@@ -14,7 +16,9 @@ app.use(express.static(path.join(__dirname, './public')));
 app.use(bodyParser.json()); // needed for angular requests
 
 /** ---------- EXPRESS ROUTES ---------- **/
-app.use('/books', books);
+app.use('/createHero', createHero);
+app.use('/deleteHero', deleteHero);
+app.use('/getHeros', getHeros);
 app.use('/', index);
 /** ---------- MONGOOSE CONNECTION HANDLING ---------- **/
 var databaseUri = 'mongodb://localhost:27017/omicron';

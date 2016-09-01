@@ -1,7 +1,7 @@
 {
-  "name": "omicron_mongoose",
+  "name": "angular_mongoose_test",
   "version": "1.0.0",
-  "description": "Walk through the Mongo in Node via Mongoose app for books",
+  "description": "MongoDB and Angular test",
   "main": "app.js",
   "scripts": {
     "start": "node server/app.js",
@@ -10,9 +10,10 @@
   "keywords": [
     "mongoose"
   ],
-  "author": "antoinette@primeacademy.io",
+  "author": "twinklefingers",
   "license": "ISC",
   "dependencies": {
+    "angular-route": "^1.5.8",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongoose": "^4.5.10"

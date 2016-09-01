@@ -1,0 +1,47 @@
+<main class="container" ng-controller="heroManagementController">
+
+    <!-- See submitted heros -->
+    <!-- <ul ng-repeat="favorite in favorites" class="favorite-critters">
+      <li>
+        <div class="row">
+         <div class="col-md-1 "></div>
+          <div class="col-md-2 ">
+            <h2>ID: {{favorite.animal_id}}</h2>
+          </div>
+          <div class="col-md-2 ">
+            <img class="pic" ng-src="{{favorite.image}}" />
+          </div>
+          <div class="col-md-6 ">
+            <h2>Name: {{favorite.name}}</h2>
+            <p>Descriptiopn: {{favorite.description}}...</p>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </li>
+    </ul> -->
+    <section id="heros" class="row">
+        <h2>Created Heros</h2>
+        <div ng-repeat="hero in heros" id="heroList">
+            <div class="heros row">
+                <div class="two columns">
+                    <p>Alias: {{hero.alias}}</p>
+                </div>
+                <div class="two columns">
+                    <p>First Name: {{hero.first_name}}</p>
+                </div>
+                <div class="two columns">
+                    <p>Last Name: {{hero.last_name}}</p>
+                </div>
+                <div class="two columns">
+                    <p>City: {{hero.city}}</p>
+                </div>
+
+                <div class="four columns">
+                    <p>Power Name: {{hero.power_name}}</p>
+                    <button ng-click="deleteHero(hero._id)" class="delete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+</main>

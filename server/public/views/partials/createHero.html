@@ -1,0 +1,46 @@
+<!-- <main class="container" ng-controller="heroCreationController"> -->
+<section id="heroSubmission" class="row">
+    <h2>Create Your Own Hero</h2>
+    <!-- Submit a hero -->
+    <form id="heroForm">
+        <div class="row">
+            <div class="two columns">
+                <label for="alias">Alias:</label>
+                <input ng-model="newHero.alias" type="text" id="currentHeroAlias" name="alias" />
+            </div>
+
+            <div class="two columns">
+                <label for="first_name">First Name:</label>
+                <input ng-model="newHero.first_name" type="text" id="currentHeroFirstName" name="first_name" />
+            </div>
+
+            <div class="two columns">
+                <label for="last_name">Last Name:</label>
+                <input ng-model="newHero.last_name" type="text" id="currentHeroLastName" name="last_name" />
+            </div>
+
+            <div class="two columns">
+                <label for="city">City:</label>
+                <input ng-model="newHero.city" type="text" id="currentHeroCity" name="city" />
+            </div>
+
+
+            <div class="four columns">
+                <label for="power_name">Power Name:</label>
+                <input ng-model="newHero.power_name" type="text" id="currentHeroPowerName" name="power_name" />
+
+                <button ng-click="submitNewHero()">Submit</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+<!-- </main> -->
+
+<!--
+alias
+first_name
+last_name
+city
+power_name
+ -->
