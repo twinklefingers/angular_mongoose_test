@@ -1,6 +1,8 @@
 2016.09.01
 
-This was a 3 hour test of knowledge of Angular.JS, Angular Routes, MongoDB and Mongoose
+This was a 3 hour test of knowledge of Angular.JS, Angular Routes, MongoDB and Mongoose - a full-fledged CRUD application
+
+Still working on getting drop down into database
 ```
 Sections, Routes, and Controllers
 
@@ -57,3 +59,5 @@ Database
 If you follow the naming guidelines above for your Collection, there is no need
  to submit any information about your database.
 ```
+
+![alt tag](/server/public/imgs/screenshot.png)
